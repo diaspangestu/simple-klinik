@@ -13,7 +13,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Username</th>
-                                <th>Password</th>
+                                <th>Nama Lengkap</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
