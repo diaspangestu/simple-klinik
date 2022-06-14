@@ -86,6 +86,14 @@ class users extends CI_Controller
 
         redirect('users');
     }
+
+    function delete($id)
+    {
+        $where = array('id' => $id);
+        $this->m_users->delete_data($where);
+
+        redirect('users');
+    }
 }
     
     /* End of file users.php */
