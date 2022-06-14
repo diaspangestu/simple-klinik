@@ -4,7 +4,7 @@
             <div class="card-header bg-primary text-white">
                 <?= $title; ?>
 
-                <a href="<?= base_url('users/add'); ?>" class="btn btn-success btn-sm float-right">Tambah Data</a>
+                <a href="<?= base_url('obat/add'); ?>" class="btn btn-success btn-sm float-right">Tambah Data</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -12,21 +12,19 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Username</th>
-                                <th>Password</th>
+                                <th>Nama Obat</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $no = 1; ?>
-                            <?php foreach ($users as $user) { ?>
+                            <?php foreach ($obat as $obat) { ?>
                                 <tr>
-                                    <td class="text-center"><?= $no; ?></td>
-                                    <td><?= $user['username']; ?></td>
-                                    <td><?= $user['nama_lengkap']; ?></td>
+                                    <td class="text-center"><?= $no++; ?></td>
+                                    <td><?= $obat['nama_obat']; ?></td>
                                     <td>
-                                        <a href="<?= base_url('users/edit/' . $user['id']); ?>" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="<?= base_url('users/delete/' . $user['id']); ?>" class="btn btn-danger btn-sm" onClick="return confirm('Yakin akan menghapus data?')">Hapus</a>
+                                        <a href="<?= base_url('obat/edit/' . $obat['id_obat']); ?>" class="btn btn-warning btn-sm">Edit</a>
+                                        <a href="<?= base_url('obat/delete/' . $obat['id_obat']); ?>" class="btn btn-danger btn-sm" onClick="return confirm('Yakin akan menghapus data?')">Hapus</a>
                                     </td>
                                 </tr>
                             <?php } ?>

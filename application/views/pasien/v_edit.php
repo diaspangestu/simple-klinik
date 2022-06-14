@@ -4,22 +4,14 @@
             <div class="card-header bg-primary text-white">
                 <?= $title; ?>
 
-                <a href="<?= base_url('users'); ?>" class="btn btn-warning btn-sm float-right">Kembali</a>
+                <a href="<?= base_url('dokter'); ?>" class="btn btn-warning btn-sm float-right">Kembali</a>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('users/update') ?>" method="post">
-                    <input type="hidden" name="id" value="<?= $users['id']; ?>">
+                <form action="<?= base_url('dokter/update') ?>" method="post">
+                    <input type="hidden" name="id_dokter" value="<?= $dokter['id_dokter']; ?>">
                     <div class="form-group">
-                        <label for="">Username</label>
-                        <input type="text" name="username" class="form-control" value="<?= $users['username']; ?>" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Password</label>
-                        <input type="password" name="password" class="form-control" placeholder="Kosongkan jika tidak ingin merubah password">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Nama Lengkap</label>
-                        <input type="text" name="nama_lengkap" class="form-control" value="<?= $users['nama_lengkap']; ?>" required>
+                        <label for="">Nama Dokter</label>
+                        <input type="text" name="nama_dokter" class="form-control" value="<?= $dokter['nama_dokter']; ?>" required>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-sm">Update Data</button>

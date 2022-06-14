@@ -30,7 +30,7 @@ class Dokter extends CI_Controller
 
     function add()
     {
-        $data['title'] = "Tambah Data dokter";
+        $data['title'] = "Tambah Data Dokter";
 
         $this->load->view('v_header', $data);
         $this->load->view('dokter/v_add');
@@ -52,7 +52,7 @@ class Dokter extends CI_Controller
 
     function edit($id)
     {
-        $data['title'] = "Edit Data dokter";
+        $data['title'] = "Edit Data Dokter";
 
         $where = array('id_dokter' => $id);
         $data['dokter'] = $this->m_dokter->edit_data($where)->row_array();
@@ -64,7 +64,7 @@ class Dokter extends CI_Controller
 
     function update()
     {
-        $data['title'] = "Update Data dokter";
+        $data['title'] = "Update Data Dokter";
 
         $id = $this->input->post('id_dokter');
         $nama_dokter = $this->input->post('nama_dokter');
