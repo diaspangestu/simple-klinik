@@ -17,6 +17,7 @@ class Pasien extends CI_Controller
         $this->load->model('m_pasien');
     }
 
+    // Function Read Data
     public function index()
     {
         $data['title'] = "Manajemen Data Pasien";
@@ -28,6 +29,7 @@ class Pasien extends CI_Controller
         $this->load->view('v_footer');
     }
 
+    // Function Insert Data
     function add()
     {
         $data['title'] = "Tambah Data Pasien";
@@ -54,6 +56,7 @@ class Pasien extends CI_Controller
         redirect('pasien');
     }
 
+    // Function Edit Data
     function edit($id)
     {
         $data['title'] = "Edit Data pasien";
@@ -87,6 +90,7 @@ class Pasien extends CI_Controller
         redirect('pasien');
     }
 
+    // Function Delete Data
     function delete($id)
     {
         $where = array('id_pasien' => $id);

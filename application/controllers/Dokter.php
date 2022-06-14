@@ -17,6 +17,7 @@ class Dokter extends CI_Controller
         $this->load->model('m_dokter');
     }
 
+    // Function Read Data
     public function index()
     {
         $data['title'] = "Manajemen Data Dokter";
@@ -28,6 +29,7 @@ class Dokter extends CI_Controller
         $this->load->view('v_footer');
     }
 
+    // Function Insert Data
     function add()
     {
         $data['title'] = "Tambah Data Dokter";
@@ -50,6 +52,7 @@ class Dokter extends CI_Controller
         redirect('dokter');
     }
 
+    // Function Edit Data
     function edit($id)
     {
         $data['title'] = "Edit Data Dokter";
@@ -79,6 +82,7 @@ class Dokter extends CI_Controller
         redirect('dokter');
     }
 
+    // Function Delete Data
     function delete($id)
     {
         $where = array('id_dokter' => $id);

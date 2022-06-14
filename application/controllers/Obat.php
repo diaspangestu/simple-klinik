@@ -17,6 +17,7 @@ class Obat extends CI_Controller
         $this->load->model('m_obat');
     }
 
+    // Function Read Data
     public function index()
     {
         $data['title'] = "Manajemen Data Obat";
@@ -28,6 +29,7 @@ class Obat extends CI_Controller
         $this->load->view('v_footer');
     }
 
+    // Function Insert Data
     function add()
     {
         $data['title'] = "Tambah Data Obat";
@@ -50,6 +52,7 @@ class Obat extends CI_Controller
         redirect('obat');
     }
 
+    // Function Edit Data
     function edit($id)
     {
         $data['title'] = "Edit Data Obat";
@@ -79,6 +82,7 @@ class Obat extends CI_Controller
         redirect('obat');
     }
 
+    // Function Delete Data
     function delete($id)
     {
         $where = array('id_obat' => $id);

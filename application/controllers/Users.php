@@ -17,6 +17,7 @@ class Users extends CI_Controller
         $this->load->model('m_users');
     }
 
+    // Function Read Data
     public function index()
     {
         $data['title'] = "Manajemen Data Users";
@@ -28,6 +29,7 @@ class Users extends CI_Controller
         $this->load->view('v_footer');
     }
 
+    // Function Insert Data
     function add()
     {
         $data['title'] = "Tambah Data Users";
@@ -54,6 +56,7 @@ class Users extends CI_Controller
         redirect('users');
     }
 
+    // Function Edit Data
     function edit($id)
     {
         $data['title'] = "Edit Data Users";
@@ -87,6 +90,7 @@ class Users extends CI_Controller
         redirect('users');
     }
 
+    // Function Delete Data
     function delete($id)
     {
         $where = array('id' => $id);
