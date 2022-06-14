@@ -3,7 +3,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login_Model extends CI_Model
+class M_login extends CI_Model
 {
     function check_login($data)
     {

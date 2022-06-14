@@ -10,7 +10,7 @@ class Auth extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model('login_model');
+        $this->load->model('m_login');
     }
 
     public function index()
@@ -33,7 +33,7 @@ class Auth extends CI_Controller
                 'password' => $pass
             );
 
-            $checkLogin = $this->login_model->check_login($data)->num_rows();
+            $checkLogin = $this->m_login->check_login($data)->num_rows();
 
             if ($checkLogin > 0) {
                 $sess_data = array(
