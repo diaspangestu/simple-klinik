@@ -21,7 +21,7 @@
                             <?php $no = 1; ?>
                             <?php foreach ($users as $user) { ?>
                                 <tr>
-                                    <td class="text-center"><?= $no++; ?></td>
+                                    <td class="text-center"><?= $no; ?></td>
                                     <td><?= $user['username']; ?></td>
                                     <td><?= $user['nama_lengkap']; ?></td>
                                     <td>
