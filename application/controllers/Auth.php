@@ -51,5 +51,11 @@ class Auth extends CI_Controller
             $this->load->view('v_login');
         }
     }
+
+    public function logout_action()
+    {
+        $this->session->sess_destroy();
+        redirect('auth');
+    }
 }
     /* End of file Dashboard.php */
